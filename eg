@@ -149,7 +149,7 @@ sub new {
       my ($ret, $output) =
         ExecUtil::execute_captured("$GIT_CMD --version", ignore_ret => 1);
       if ($ret != 0 || $output !~ /^git version .*$/) {
-	  die "Error: Cannot execute git (check your git installation)!\n";
+        die "Error: Cannot execute git (check your git installation)!\n";
       }
 
       # 3) They just aren't in a project tracked by git
@@ -4156,7 +4156,7 @@ sub run {
 
   my @args = Util::quote_args(@{$self->{args}});
   return ExecUtil::execute("$GIT_CMD $self->{git_args} push @args",
-			   ignore_ret => 1);
+                           ignore_ret => 1);
 }
 
 ###########################################################################
