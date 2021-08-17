@@ -7,9 +7,9 @@
 
 ## To use eg, simply stick this file in your path.  Then fire off an
 ## 'eg help' to get oriented.  You may also be interested in
-##   http://www.gnome.org/~newren/eg/git-for-svn-users.html
+##   http://people.gnome.org/~newren/eg/git-for-svn-users.html
 ## to get a comparison to svn in terms of capabilities and commands.
-## Webpage for eg: http://www.gnome.org/~newren/eg
+## Webpage for eg: http://people.gnome.org/~newren/eg
 
 use strict;
 use warnings;
@@ -3443,13 +3443,13 @@ Examples:
       \$ cd ..
       \$ eg clone myserver.com:/var/scratch/git-stuff/my-repo.git
 
-  Publish a copy of the current repository on the machine www.gnome.org, in
+  Publish a copy of the current repository on the machine people.gnome.org, in
   the public_html/myproj subdirectory of the home directory of the remote
   user fake, then immediately clone it again into a separate directory
   named another-myproj.
-      \$ eg publish fake\@www.gnome.org:public_html/myproj
+      \$ eg publish fake\@people.gnome.org:public_html/myproj
       \$ cd ..
-      \$ eg clone http://www.gnome.org/~fake/myproj another-myproj
+      \$ eg clone http://people.gnome.org/~fake/myproj another-myproj
 
 Options
   --bypass-modification-check, -b
