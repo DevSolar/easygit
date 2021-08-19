@@ -129,7 +129,7 @@ sub new {
 
   # We allow direct instantiation of the subcommand class only if they
   # provide a command name for us to pass to git.
-  if (ref($class) eq "subcommand" && !defined $self->{command}) {
+  if (ref($self) eq "subcommand" && !defined $self->{command}) {
     die "Invalid subcommand usage"
   }
 
