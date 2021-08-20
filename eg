@@ -7575,27 +7575,9 @@ sub launch ($) {
     Util::pop_debug();
   }
 
-  # run & postprocess
-  if (!$action->can("postprocess")) {
-    print ">>Stage: Run<<\n" if $DEBUG;
-    $ret = $action->run();
-  } else {
-    my $output = "";
-    open($OUTFH, '>', \$output) || die "eg $job: cannot open \$OUTFH: $!";
-    print ">>Stage: Run<<\n" if $DEBUG;
-    $ret = $action->run();
-    print ">>Stage: Postprocess<<\n" if $DEBUG;
-    $action->postprocess($output);
-  }
-
-  # wrapup
-  if ($action->can("wrapup")) {
-    print ">>Stage: Wrapup<<\n" if $DEBUG;
-    $action->wrapup();
-  }
-
-  $ret = 0 unless ($ret);
-  exit $ret;
+  # run
+  print ">>Stage: Run<<\n" if $DEBUG;
+  exit $action->run();
 }
 
 sub version () {
